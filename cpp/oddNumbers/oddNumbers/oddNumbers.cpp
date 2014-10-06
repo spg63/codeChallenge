@@ -17,8 +17,10 @@
 
 
 #include <iostream>
+using std::cout;
 
 void printOdds(int x);
+
 int main() {
     int x = 1;
     printOdds(x);
@@ -27,13 +29,16 @@ int main() {
 }
 
 void printOdds(int x){
+    // End the recursion
     if(x == 99){
-        std::cout << x << "\n";
+        cout << x << "\n";
     }
+    // If odd number, print
     if((x % 2 != 0) && (x < 99)){
-        std::cout << x << "\n";
+        cout << x << "\n";
         printOdds(x + 2);
     }
+    // If even number, move on
     if((x % 2 == 0) && (x < 99)){
         printOdds(x + 1);
     }

@@ -268,7 +268,7 @@ namespace numUtils{
      * Recursively sum the digits of a number
      *
      * @param: x - int
-     * @return: T - returns an int
+     * @return: int - returns an int
      */
     int sumOfDigits(int x){
         if(x < 0)
