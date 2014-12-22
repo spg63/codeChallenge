@@ -1,4 +1,10 @@
-﻿module main;
+﻿/*
+ * For comparison sake, using bash time utility:
+ *	dlang version:	0m0.003s
+ *	cpp version:	0m0.001s
+ */
+
+module main;
 
 import std.stdio;	//input / output
 import std.conv;	//string to int

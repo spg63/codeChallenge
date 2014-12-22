@@ -2,6 +2,10 @@
  * Dlang version of sumOfIntsFromFile.cpp
  * Author: 	Sean Grimes
  * Date:	12/11/14
+ *
+ * For comparison sake, using bash time utility:
+ *	dlang version:	0m0.002s
+ *	cpp version:	0m0.001s
  */
 
 import std.stdio;	// Input / Output / File

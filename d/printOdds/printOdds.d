@@ -1,4 +1,10 @@
-﻿module main;
+﻿/*
+ * For comparison sake, using bash time utility:
+ *	dlang version:	0m0.002s
+ *	cpp version:	0m0.003s
+ */
+
+module main;
 
 import std.stdio;
 

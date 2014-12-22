@@ -122,3 +122,19 @@ python/isPrime/.project
 python/isPrime/.pydevproject
 
 *.xccheckout
+
+*.swp
+
+d/sumOfPrimes/sumOfPrimes
+
+d/sumOfIntsFromFile/sumOfIntsFromFile
+
+d/sumOfDigits/sumOfDigits
+
+d/romanNumerals/romanNumerals
+
+d/printOdds/printOdds
+
+d/fibNumbers/fibNumbers
+
+cpp/oddNumbers/oddNumbers/a.out
