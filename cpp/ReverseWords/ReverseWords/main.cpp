@@ -23,8 +23,6 @@ using std::string;
 using std::ifstream;
 #include <vector>
 using std::vector;
-#include <algorithm>
-using std::copy;
 #include <iterator>
 using std::istream_iterator;
 #include <sstream>
@@ -46,8 +44,7 @@ int main(int argc, const char * argv[]) {
     
     for(auto i = 0; i < lines.size(); ++i){
         // This passes a string, reverses it, then gives it back for printing
-        string reversed = reverseString(lines[i]);
-        cout << reversed << "\n"; // don't flush on each line
+        cout << reverseString(lines[i]) << "\n";
     }
     
 }
@@ -80,6 +77,12 @@ string reverseString(string &s){
     return reversed;
 }
 
+/*
+    Takes a file line in original format
+    Puts it into a stringstream
+    Splits the stringstream on whitespace and puts the words into a vector
+    Returns the vector
+*/
 vector<string> splitString(string &lineOfFile){
     std::istringstream ss(lineOfFile);
     std::istream_iterator<string> begin(ss), end;
