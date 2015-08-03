@@ -26,7 +26,7 @@ using std::vector;
 #include <iterator>
 using std::istream_iterator;
 #include <sstream>
-using std::stringstream;
+using std::istringstream;
 
 void putLinesIntoVector(vector<string> &vec, ifstream &stream);
 string reverseString(string &s);
@@ -84,8 +84,8 @@ string reverseString(string &s){
     Returns the vector
 */
 vector<string> splitString(string &lineOfFile){
-    std::istringstream ss(lineOfFile);
-    std::istream_iterator<string> begin(ss), end;
+    istringstream ss(lineOfFile);
+    istream_iterator<string> begin(ss), end;
     vector<string> re(begin, end);
     return re;
 }

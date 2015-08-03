@@ -8,11 +8,11 @@
 
 /**
  * Link:                https://www.codeeval.com/open_challenges/4/
- * Run Time Reported:
- * Mem Use Reported:
- * Score
- * Ranking Points:
- * Unique:
+ * Run Time Reported:   4ms
+ * Mem Use Reported:    9.180 KB
+ * Score:               100
+ * Ranking Points:      34.985 / 35 (Easy Challenge Max)
+ * Unique:              Yes
  */
 
 
@@ -28,12 +28,21 @@ int main(int argc, const char * argv[]) {
     int n = 7920;
     vector<int> printPrimes;
     printPrimes = sieve(n);
-    int total_sum = 0;
+    //int total_sum = 0;
+    int total_sum_new = 0;
+    
+    for(int i: printPrimes){
+        total_sum_new = total_sum_new + i;
+    }
+   
+    /*
     for(int i = 0; i < printPrimes.size(); ++i){
         total_sum = total_sum + printPrimes[i];
     }
+    */
     
-    cout << "Total: " << total_sum << std::endl;
+    //cout << total_sum << "\n";
+    cout << total_sum_new;
     return 0;
 }
 
@@ -58,7 +67,7 @@ vector<int> sieve(int n){
             // If element has been set to true, print.
             if ( vec[i] == true ){
                 //(i+1) is prime, print it and mark its multiples
-                primes.push_back(i + 1);
+                primes.emplace_back(i + 1);
                 //cout << i + 1 << ",";
                 // Marking more
                 markElements(vec, i+1, n);
